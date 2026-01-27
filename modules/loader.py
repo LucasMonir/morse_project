@@ -2,11 +2,9 @@ import json;
 from pathlib import Path;
 
 
-def load_morse():
-    base_dir = Path(__file__).parent.parent;
-    morse_path = base_dir / "resources" / "morse.json";
+def load_morse(path):
     try:
-        with open(morse_path, "r") as morse_file:
+        with open(path, "r") as morse_file:
             morse = json.load(morse_file)
 
             if not morse:          
@@ -16,5 +14,5 @@ def load_morse():
 
             return morse;
     except:
-        print(f'Failed loading morse dictionary at directory: {morse_path}');
+        print(f'Failed loading morse dictionary at directory: {path}');
  
