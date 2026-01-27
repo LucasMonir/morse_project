@@ -14,7 +14,6 @@ class Loader():
                 print('Morse dictionary loaded!');
 
                 return morse;
-            print(f'Failed loading morse dictionary at directory: {path}, error: {ex}');
 
     def load_text_to_convert(path):
             with open(path, "r") as text:
