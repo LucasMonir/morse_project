@@ -17,10 +17,7 @@ def main():
 
 def convert(text, morse_dict):
     for key in text:
-        if morse_dict.get(key.lower()):
-            print(morse_dict.get(key.lower()))
-        else:
-            print(f'not codifiable: "{key}"')
+        print(morse_dict.get(key.lower(), key))
 
 
 if __name__ == '__main__':
